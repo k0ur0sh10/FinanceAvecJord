@@ -1,0 +1,93 @@
+/* Custom Styles for JB Advisor Website */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Force all text to use white by default */
+body, label, span, div, p, td, th, li, a, button {
+  color: #FFFFFF !important;
+}
+
+/* Keep gold accent text */
+.text-\[var\(--gold\)\] {
+  color: var(--gold) !important;
+}
+
+/* Keep specific colored text like champagne */
+[class*="text-[var(--"] {
+  /* Preserve intentional color choices */
+}
+
+/* Ensure all placeholders are visible */
+input::placeholder,
+textarea::placeholder {
+  color: #9CA3AF !important;
+  opacity: 1;
+}
+
+/* Ensure all select options are readable */
+select option {
+  background-color: #2F3142 !important;
+  color: #FFFFFF !important;
+}
+
+/* Glassmorphism Effect - Enhanced contrast */
+.glass {
+  background: rgba(36, 37, 48, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+/* Luxury Glow Effects */
+.luxury-glow {
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.luxury-glow:hover {
+  box-shadow: 0 0 30px rgba(212, 175, 55, 0.2);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gold);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--champagne);
+}
+
+/* Selection Style */
+::selection {
+  background-color: var(--gold);
+  color: var(--background);
+}
+
+/* Smooth transitions for all interactive elements */
+button, a, input, select, textarea {
+  transition: all 0.2s ease;
+}
+
+/* Focus states */
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+}
+
+/* Prevent layout shift from scrollbar */
+html {
+  overflow-y: scroll;
+}
