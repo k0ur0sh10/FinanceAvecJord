@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router";
+import { createHashRouter } from "react-router";
 import { RootLayout } from "./layouts/RootLayout";
 import { AdminLayout } from "./layouts/AdminLayout";
 import { HomePage } from "./pages/HomePage";
@@ -12,7 +12,7 @@ import { AdminCalendar } from "./pages/AdminCalendar";
 import { AdminClients } from "./pages/AdminClients";
 import { NotFound } from "./pages/NotFound";
 
-export const router = createBrowserRouter([
+export const router = createHashRouter([
   {
     path: "/",
     element: <RootLayout />,
