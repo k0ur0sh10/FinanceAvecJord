@@ -1,11 +1,11 @@
 import { motion } from "motion/react";
 import { Award, GraduationCap, Shield, Users, TrendingUp, Heart, Building2 } from "lucide-react";
-import advisorPhoto from "figma:asset/3cdfcf1cdb2fbf33290d26acfffac159f4cf8857.png";
+import advisorPhoto from "@/assets/3cdfcf1cdb2fbf33290d26acfffac159f4cf8857.png";
 import { useLanguage } from "../contexts/LanguageContext";
 
 export function AboutPage() {
   const { t } = useLanguage();
-  
+
   const certifications = t("about.profile.certs") as unknown as string[];
 
   const values = [
@@ -39,7 +39,7 @@ export function AboutPage() {
       <section className="relative py-24 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-background via-card/30 to-background" />
         <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-[#3B82F6] rounded-full blur-3xl opacity-5" />
-        
+
         <div className="relative max-w-4xl mx-auto px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -67,8 +67,8 @@ export function AboutPage() {
             >
               {/* Profile Image */}
               <div className="relative rounded-2xl overflow-hidden aspect-[4/5] bg-gradient-to-br from-card/80 to-card/40 border-2 border-[#3B82F6]/30 shadow-2xl">
-                <img 
-                  src={advisorPhoto} 
+                <img
+                  src={advisorPhoto}
                   alt="Jordan Beaulieu - Senior Insurance Advisor"
                   className="w-full h-full object-cover"
                 />

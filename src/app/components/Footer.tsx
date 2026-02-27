@@ -1,11 +1,11 @@
 import { Link } from "react-router";
 import { Mail, Phone, MapPin } from "lucide-react";
-import logo from "figma:asset/5cd219d9afe328db6196c812cd74b522e89396af.png";
+import logo from "@/assets/5cd219d9afe328db6196c812cd74b522e89396af.png";
 import { useLanguage } from "../contexts/LanguageContext";
 
 export function Footer() {
   const { t } = useLanguage();
-  
+
   return (
     <footer className="border-t border-border/50 bg-card/30 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-12">

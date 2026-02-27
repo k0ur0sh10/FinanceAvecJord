@@ -2,7 +2,7 @@ import { Link, useLocation } from "react-router";
 import { motion, AnimatePresence } from "motion/react";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import logo from "figma:asset/5cd219d9afe328db6196c812cd74b522e89396af.png";
+import logo from "@/assets/5cd219d9afe328db6196c812cd74b522e89396af.png";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { useLanguage } from "../contexts/LanguageContext";
 
@@ -10,7 +10,7 @@ export function Header() {
   const location = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { t } = useLanguage();
-  
+
   const links = [
     { name: t("nav.home"), path: "/" },
     { name: t("nav.services"), path: "/services" },
@@ -36,10 +36,10 @@ export function Header() {
         <div className="flex items-center justify-between gap-4">
           {/* Logo */}
           <Link to="/" className="flex items-center group" onClick={handleLinkClick}>
-            <img 
-              src={logo} 
-              alt="Finance Avec Jordi" 
-              className="h-14 sm:h-16 w-auto object-contain transition-transform group-hover:scale-105" 
+            <img
+              src={logo}
+              alt="Finance Avec Jordi"
+              className="h-14 sm:h-16 w-auto object-contain transition-transform group-hover:scale-105"
             />
           </Link>
 
@@ -51,11 +51,10 @@ export function Header() {
                 to={link.path}
                 className="relative group"
               >
-                <span className={`text-sm tracking-wide transition-colors ${
-                  isActive(link.path) 
-                    ? "text-[#3B82F6]" 
-                    : "text-muted-foreground hover:text-foreground"
-                }`}>
+                <span className={`text-sm tracking-wide transition-colors ${isActive(link.path)
+                  ? "text-[#3B82F6]"
+                  : "text-muted-foreground hover:text-foreground"
+                  }`}>
                   {link.name}
                 </span>
                 {isActive(link.path) && (
@@ -106,11 +105,10 @@ export function Header() {
                   key={link.path}
                   to={link.path}
                   onClick={handleLinkClick}
-                  className={`block px-4 py-3 rounded-lg transition-colors ${
-                    isActive(link.path)
-                      ? "bg-[#3B82F6]/10 text-[#3B82F6]"
-                      : "text-muted-foreground hover:bg-accent hover:text-foreground"
-                  }`}
+                  className={`block px-4 py-3 rounded-lg transition-colors ${isActive(link.path)
+                    ? "bg-[#3B82F6]/10 text-[#3B82F6]"
+                    : "text-muted-foreground hover:bg-accent hover:text-foreground"
+                    }`}
                 >
                   {link.name}
                 </Link>
