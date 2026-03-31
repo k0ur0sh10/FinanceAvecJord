@@ -513,7 +513,7 @@ export default function HomePage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628]/70 via-transparent to-transparent" />
                   <div className="absolute bottom-6 left-6">
                     <p className="text-white" style={{ fontWeight: 700, fontSize: '1.25rem' }}>Jordan</p>
-                    <p className="text-white/60 text-sm">{t('Conseiller en sécurité financière & Courtier d\'assurance', 'Financial Security Advisor & Insurance Broker')}</p>
+                    
                   </div>
                 </div>
               </div>
